@@ -20,6 +20,50 @@ function Sample(title, link, body) {
   this.link = link;
   this.body = body;
 }
+function Project(img, github, website) {
+  this.img = img;
+  this.github = github;
+  this.website = website;
+}
+//project
+
+const MovieProject = new Project(
+  "../img/projects/movie.jpg",
+  "https://github.com/Nima-Ferdowsi/React_Movie_app",
+  "http://rise-movie.42web.io/"
+);
+const whatsappCloneProject = new Project(
+  "../img/projects/whatsapp_image.jpg",
+  "https://github.com/Nima-Ferdowsi/Whatsup-clone",
+  "https://whatsappclon.netlify.app/"
+);
+const cryptoTracker = new Project(
+  "../img/projects/crypto.png",
+  "https://github.com/Nima-Ferdowsi/crypto_tracker",
+  "https://rise-crypto-tracker.netlify.app"
+);
+const tesla = new Project(
+  "../img/projects/tesla.png",
+  "https://github.com/Nima-Ferdowsi/tesla_landing_page",
+  "https://rise-tesla-clone.netlify.app"
+);
+const coffee = new Project(
+  "../img/projects/coffee.png",
+  "https://github.com/Nima-Ferdowsi/coffee_landing_page",'https://rise-coffee.netlify.app'
+);
+const ecommerceProject = new Project("../img/projects/ecommerce.png", "https://github.com/Nima-Ferdowsi/Ecommerce-", "https://rise-ecommerce.netlify.app/");
+const adminProject = new Project("../img/projects/admin.png", "https://github.com/Nima-Ferdowsi/Ecommerce-", "https://rise-ecommerce.netlify.app/admin/dashboard");
+
+const projectList = [
+  cryptoTracker,
+  whatsappCloneProject,
+  ecommerceProject,
+  adminProject,
+  MovieProject,
+  coffee,
+  tesla,
+];
+
 //skills
 const Html = new Skills("Html", "100");
 const Css = new Skills("CSS", "95");
@@ -52,19 +96,17 @@ const mySkills = [
 const Pyaramid = new Experience(
   "Pyramid.Inv",
   "Fullstack developer | Ireland ",
-  "2019-01-01",
-   new Date(),
-  ` Pyramid.Inv was my first company that I was.
-This company was not public 
-company it was organization between companies for buying stocks.....`
+  "2020-05-01",
+  new Date(),
+  ` Pyramid.Inv was my second company that I was.
+  I developed webistes with react js and and i had some project cooperated with backend team  and the stack we used node js (express framework), working with a very  agile team creating responsive websites for the company and sometimes for another clients`
 );
 const CloudTree = new Experience(
   "CloudTree/Cloud4Agri",
   "Frontend developer | Ireland ",
-  "2020-12-10",
-  "2021-05-10",
-  ` CloudTree was my second company that I was.
-   in this company I work on both website(regular) and mobile apps(games). 
+  "2020-01-10",
+  "2020-06-10",
+  ` this company was a company that was only a five month contract and my job there was to create a responsive websites with react js and create UI for mobile game app  in html css and javascript the name of the game was  (word master mind) 
   `
 );
 const Freelancer = new Experience(
@@ -84,7 +126,7 @@ const NumberLand = new Experience(
 const myExperience = [Pyaramid, CloudTree];
 
 //sample
-const Movie = new Sample(
+/* const Movie = new Sample(
   "Movie",
   "http://rise-movie.42web.io/",
   `This site is an sample of project of an Movie Website that has different sections, such as
@@ -106,7 +148,7 @@ const Ecommerce = new Sample(
   backend: node js,express ,mongodb,`
 );
 
-const mySamples = [Movie, WhatsApp, Ecommerce];
+const mySamples = [Movie, WhatsApp, Ecommerce]; */
 
 const addProgressBar = () => {
   for (let i = 0; i < mySkills.length; i++) {
@@ -174,8 +216,34 @@ const addSamples = () => {
     document.querySelector("#sampals_list").innerHTML += sampleElement;
   }
 };
+
+const addProject = () => {
+  for (let i = 0; i < projectList.length; i++) {
+    const element = projectList[i];
+    const projectItem = `   
+    <div class="project col-lg-6 col-md-12 col-sm-12 col-12">
+
+    <div class="img_container">
+
+        <img src=${element.img} alt="">
+        <div class="overlay">
+            <h4>Sample Projects</h4>
+            <div class="row link_group">
+                <a class='btn btn-primary'href=${element.github} target="_blank">Github </a>
+                <a class='btn btn-secondary'href=${element.website} target="_blank">Visit </a>
+         </div>
+        </div>
+    </div>
+
+</div>`;
+    document.querySelector("#project_section_list").innerHTML += projectItem;
+  }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   addProgressBar();
   addExperience();
-/*   addSamples();
- */});
+  addProject();
+  /*   addSamples();
+   */
+});
