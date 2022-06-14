@@ -30,7 +30,7 @@ function Project(img, github, website) {
 const MovieProject = new Project(
   "../img/projects/movie.jpg",
   "https://github.com/Nima-Ferdowsi/React_Movie_app",
-  "http://rise-movie.42web.io/"
+  "http://rise-movie.infinityfreeapp.com/"
 );
 const whatsappCloneProject = new Project(
   "../img/projects/whatsapp_image.jpg",
@@ -95,18 +95,26 @@ const mySkills = [
 //experience
 const Pyaramid = new Experience(
   "Pyramid.Inv",
-  "Fullstack developer | Ireland ",
-  "2020-05-01",
+  "Fullstack developer | Turkey ",
+  "2021-04-01",
   new Date(),
-  ` Pyramid.Inv was my second company that I was.
-  I developed webistes with react js and and i had some project cooperated with backend team  and the stack we used node js (express framework), working with a very  agile team creating responsive websites for the company and sometimes for another clients`
+  `I developed webistes with react js and and i had some project cooperated with backend team and the stack we used node js (express framework), working with a very agile team creating responsive websites for the company and sometimes for another clientsI developed webistes with react js and and i had some project cooperated with backend team and the stack we used node js (express framework), working with a very agile team creating responsive websites for the company and sometimes for another clients
+  Skills: Redux.js · React.js · JavaScript · Node.js · SASS · TypeScript`
+);
+const YemekSepeti = new Experience(
+  "Yemek Sepeti",
+  "Fullstack developer | Turkey ",
+  "2020-06-01",
+  "2020-12-01",
+  `I developed webistes with react js and and i had some project cooperated with backend team and the stack we used node js (express framework), working with a very agile team creating responsive websites for the company and sometimes for another clientsI developed webistes with react js and and i had some project cooperated with backend team and the stack we used node js (express framework), working with a very agile team creating responsive websites for the company and sometimes for another clients
+  Skills: Redux.js · React.js · JavaScript · Node.js · SASS · TypeScript`
 );
 const CloudTree = new Experience(
   "CloudTree/Cloud4Agri",
   "Frontend developer | Ireland ",
   "2020-01-10",
   "2020-06-10",
-  ` this company was a company that was only a five month contract and my job there was to create a responsive websites with react js and create UI for mobile game app  in html css and javascript the name of the game was  (word master mind) 
+  `this company was a company that was only a five month contract and my job there was to create a responsive websites with react js and create UI for mobile game app  in html css and javascript the name of the game was  (word master mind)
   `
 );
 const Freelancer = new Experience(
@@ -123,7 +131,7 @@ const NumberLand = new Experience(
   new Date(),
   "In this company I was Responsible for frontend this company it was a company that selling virtual numbers to clients "
 );
-const myExperience = [Pyaramid, CloudTree];
+const myExperience = [Pyaramid,YemekSepeti, CloudTree];
 
 //sample
 /* const Movie = new Sample(
